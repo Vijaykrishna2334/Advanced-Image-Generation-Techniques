@@ -18,11 +18,11 @@ The workflow uses a **ControlNet** model to guide the image generation, ensuring
 
 This workflow is ideal for creating custom portraits or stylized images where you need fine-grained control over the subject's pose and appearance.
 
-##WORKFLOW
+### WORKFLOW
 
 ![App Screenshot](runningrase.png)
 
-##EXAMPLE
+### EXAMPLE
 
 ![App Screenshot](images/ComfyUI_00576_.png)
 
