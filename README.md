@@ -24,7 +24,9 @@ This workflow is ideal for creating custom portraits or stylized images where yo
 
 ##EXAMPLE
 
-![App Screenshot](pose_1.png)
+![App Screenshot](images/ComfyUI_00576_.png)
+
+
 
 
 
