@@ -26,6 +26,10 @@ This workflow is ideal for creating custom portraits or stylized images where yo
 
 ![App Screenshot](images/ComfyUI_00576_.png)
 
+### Watch the Video
+
+[![Watch the video](https://img.youtube.com/vi/966SoSj46SQ/hqdefault.jpg)](https://www.youtube.com/watch?v=966SoSj46SQ)
+
 
 
 
