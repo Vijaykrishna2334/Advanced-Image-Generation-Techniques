@@ -1,40 +1,75 @@
+<div align="center">
 
-# Advanced Image Generation Techniques
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=4,10,18&height=160&section=header&text=Advanced%20Image%20Generation&fontSize=36&fontColor=fff&animation=twinkling&fontAlignY=36&desc=ComfyUI%20Workflow%20%E2%80%94%20ControlNet%20%2B%20LoRA%20%2B%20Pose%20Transfer&descAlignY=58&descSize=14" width="100%"/>
 
+[![ComfyUI](https://img.shields.io/badge/ComfyUI-Workflow-orange?style=for-the-badge)](https://github.com/comfyanonymous/ComfyUI)
+[![ControlNet](https://img.shields.io/badge/ControlNet-Enabled-blue?style=for-the-badge)](https://github.com/lllyasviel/ControlNet)
+[![SDXL](https://img.shields.io/badge/SDXL-Base-purple?style=for-the-badge)](https://stability.ai/)
 
-### Workflow Description
+**Pose-controlled portrait generation with ControlNet + 4x upscaling**
 
-This ComfyUI workflow demonstrates a process for generating and enhancing an image based on a source image and a control model. It is designed to take a reference photo of a person and a control image (likely a pose) and use them to create a new, high-quality image of that person in the specified pose, with a custom background and style.
+</div>
 
-The workflow uses a **ControlNet** model to guide the image generation, ensuring the pose from the control image is accurately transferred to the final output. It also includes an **upscaling** step to improve the resolution and detail of the final image.
+---
 
-### Key Features of the Workflow
+## 🎯 What It Does
 
-* **Image-to-Image Generation**: Uses a user-provided initial image and a ControlNet image to guide the generation process.
-* **ControlNet Integration**: Employs a **ControlNet model** (specifically `diffusers_xl_canny_full_v10.safetensors` and `ControlNet-Canny.safetensors`) to precisely control the pose and composition.
-* **Prompt-Driven Styling**: Utilizes a text prompt to define the scene, style, and details of the final image, such as "a man at a running race."
-* **Two-Pass Upscaling**: The workflow includes an upscaling phase, using a model like `SwinIR_4x.safetensors`, to enhance the image quality and resolution after the initial generation.
-* **Reusable and Modular**: The node-based structure of ComfyUI allows users to easily swap out models, change prompts, or adjust settings to achieve different results.
+A **ComfyUI workflow** that generates high-quality AI portraits using a reference photo + pose control image. Takes any person's photo and places them in a new scene with a custom pose — powered by ControlNet and SDXL.
 
-This workflow is ideal for creating custom portraits or stylized images where you need fine-grained control over the subject's pose and appearance.
+---
 
-### WORKFLOW
+## ✨ Workflow Features
 
-![App Screenshot](runningrase.png)
+| Feature | Description |
+|---|---|
+| 🎭 **ControlNet Pose** | Transfer exact pose from a control image to the output |
+| 🖼️ **Image-to-Image** | Use a reference photo to preserve subject identity |
+| 📐 **Canny Control** | Edge-based composition control for precise results |
+| 🔍 **4x Upscaling** | SwinIR upscaling for high-resolution final output |
+| ✍️ **Prompt Styling** | Text prompt drives scene, lighting, and style |
 
-### EXAMPLE
+---
 
-![App Screenshot](images/ComfyUI_00576_.png)
+## 🏗 How It Works
 
-![App Screenshot](images/ComfyUI_00545_.png)
+```
+Input: Reference photo + Pose control image
+        ↓
+ControlNet (Canny) — guides composition + pose
+        ↓
+SDXL generates base image with text prompt
+        ↓
+SwinIR 4x upscaler — enhances resolution
+        ↓
+Final high-quality portrait output
+```
 
-### Watch the Video
+---
 
-[![Watch the video](https://img.youtube.com/vi/966SoSj46SQ/hqdefault.jpg)](https://www.youtube.com/watch?v=966SoSj46SQ)
+## 🛠 Models Used
 
+| Model | Purpose |
+|---|---|
+| `diffusers_xl_canny_full_v10.safetensors` | ControlNet Canny for SDXL |
+| `ControlNet-Canny.safetensors` | Edge-based pose control |
+| `SwinIR_4x.safetensors` | 4x image upscaling |
 
+---
 
+## 🚀 Setup
 
+1. Install [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
+2. Place model files in `ComfyUI/models/` directories
+3. Load `final.json` workflow in ComfyUI
+4. Connect your reference photo and pose image
+5. Run the workflow
 
+---
 
+## 📬 Contact
 
+**Built by [Vijay Krishna](https://github.com/Vijaykrishna2334)**
+- 📧 vijaykrishna2334@gmail.com
+- 💼 [LinkedIn](https://linkedin.com/in/vijaykrishna2334)
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=4,10,18&height=80&section=footer" width="100%"/>
